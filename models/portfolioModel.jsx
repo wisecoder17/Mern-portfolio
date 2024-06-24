@@ -50,15 +50,7 @@ const aboutSchema = new mongoose.Schema({
     }
 });
 
-const experienceSchema = new mongoose.Schema({
-    dev: {
-        type: String,
-        required: true,
-    },
-    code: {
-        type: Array,
-        required: true,
-    },
+const codeSchema = new mongoose.Schema({
     language: {
         type: String,
         required: true,
@@ -67,6 +59,13 @@ const experienceSchema = new mongoose.Schema({
         type: String,
         required: true,
     }
+});
+const experienceSchema = new mongoose.Schema({
+    dev: {
+        type: String,
+        required: true,
+    },
+    code: [codeSchema]
 });
 
 const portfolioSchema = new mongoose.Schema({
@@ -87,19 +86,18 @@ const portfolioSchema = new mongoose.Schema({
         required: true,
     }
 });
+const serviceSchema = new mongoose.Schema({
+    description: {
+        type: String,
+        required: true,
+    }
+});
 const servicesSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
     },
-    service: {
-        type: Array,
-        required: true,
-    },
-    description: {
-        type: String,
-        required: true,
-    }
+    service: [serviceSchema]
 });
 const contactSchema = new mongoose.Schema({
     Name: {
@@ -127,4 +125,13 @@ const contactSchema = new mongoose.Schema({
         required: true,
     },
 });
+
+module.exports = {
+    Intro: mongoose.model("intros", introSchema),
+    About: mongoose.model("abouts", aboutSchema),
+    Experience: mongoose.model("experience", experienceSchema),
+    Portfolio: mongoose.model("portfolio", portfolioSchema),
+    Services: mongoose.model("services", servicesSchema),
+    Contact: mongoose.model("contact", contactSchema)
+}
 
