@@ -1,0 +1,19 @@
+.contact_card {
+    padding: 2rem;
+}
+
+.contact_card span,
+.contact_card h1 {
+    font-size: 1.5rem;
+    padding: 0 0.2rem -2rem 0.2rem;
+    line-height: 2rem;
+    color: var(--color-gray-300);
+}
+
+.contact_container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
