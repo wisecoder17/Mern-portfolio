@@ -1,6 +1,6 @@
 import React from 'react'
 import './contact.css'
-import IMG from '../../assets/demo3.jpeg'
+import IMG from '../../../assets/demo3.jpeg'
 import { user } from './data';
 function contact() {
     return (

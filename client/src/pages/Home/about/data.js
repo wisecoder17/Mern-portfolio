@@ -1,4 +1,4 @@
-import Me from '../../assets/about-me.jpeg'
+import Me from '../../../assets/about-me.jpeg'
 
 export const aboutInfo = [
     {

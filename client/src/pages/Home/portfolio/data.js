@@ -1,9 +1,9 @@
-import IMG1 from '../../assets/Demo1.jpeg'
-import IMG2 from '../../assets/demo2.jpeg'
-import IMG3 from '../../assets/demo3.jpeg'
-import IMG4 from '../../assets/demo4.png'
-import IMG5 from '../../assets/demo5.jpeg'
-import IMG6 from '../../assets/demo6.jpeg'
+import IMG1 from '../../../assets/Demo1.jpeg'
+import IMG2 from '../../../assets/demo2.jpeg'
+import IMG3 from '../../../assets/demo3.jpeg'
+import IMG4 from '../../../assets/demo4.png'
+import IMG5 from '../../../assets/demo5.jpeg'
+import IMG6 from '../../../assets/demo6.jpeg'
 export const portfolios = [
     {
         _id: "2345678",

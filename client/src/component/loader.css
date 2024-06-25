@@ -1,0 +1,27 @@
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-gray-500);
+    z-index: 1000;
+}
+
+.letter{
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+h1.text1{
+    color: var(--color-secondary);
+}
+h1.text2{
+    color: var(--color-gray-100);
+}
+h1.text3{
+    color: var(--color-primary);
+}
