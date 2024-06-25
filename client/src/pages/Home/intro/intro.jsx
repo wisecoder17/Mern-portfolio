@@ -1,28 +1,31 @@
+import React from 'react';
 import './header.css'
-import { Intros } from './data'
+import Image from '../../../assets/me.png'
+import { useSelector } from 'react-redux';
 
 
-const header = () => {
+const Header = () => {
+    const { portfolioData } = useSelector((state) => state.root);
+  const {intro} = portfolioData;
+  const {fname, lname, WelcomeText, image, role, cv} = intro;
   return (
     <header className="header">
-      {Intros.map(intro => (
       <div className="container header_container">
         <div className="header-left">
-          <h5>{intro.WelcomeText}</h5>
-          <h1>{intro.lname} {intro.fname}</h1>
-          <h4 className="text-light">{intro.role}</h4>
-          <a href= {intro.cv} download className='btn'>View CV</a>
+          <h5>{WelcomeText || ""}</h5>
+          <h1>{lname || ""} {fname || ""}</h1>
+          <h4 className="text-light">{role || ""}</h4>
+          <a href= {cv || ""} download className='btn'>View CV</a>
         </div>
         <div className="header-right">
           <div className="header-circle"></div>
           <div className="header-image">
-            <img src= {intro.image} alt="" />
+            <img src= {Image} alt="" />
           </div>
         </div>
       </div>
-      ))}
     </header>
   )
 }
 
-export default header
+export default Header

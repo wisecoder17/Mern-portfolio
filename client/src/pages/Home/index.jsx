@@ -8,22 +8,29 @@ import Portfolio from './portfolio/Portfolio'
 import Contact from './contact/contact'
 import Sider from './Sider/Sider'
 import Footer from '../../component/footer'
+import { useSelector } from 'react-redux'
 
 
 
 
 function Home() {
+    const { portfolioData } = useSelector((state) => state.root);
     return (
         <div>
             <Navbar />
-            <Intro />
-            <About />
-            <Services />
-            <Experience />
-            <Portfolio />
-            <Contact />
-            <Sider />
-            <Footer />
+                <div className="">
+                    <Intro />
+                    <About />
+                    <Services />
+                    <Experience />
+                    <Portfolio />
+                    <Contact />
+                    <Sider />
+                    <Footer />
+                </div>
+            {portfolioData && (
+                "helo"
+            )}
 
         </div>
     )

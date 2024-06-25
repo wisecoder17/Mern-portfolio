@@ -4,8 +4,6 @@ import { experiences } from './data'
 import { BsPatchCheckFill } from 'react-icons/bs'
 
 const Experience = () => {
-  console.log(experiences.filter(experience => experience.dev === "Frontend")
-  )
   return (
     <section id='experience'>
       <h4>Skills I Have </h4>
