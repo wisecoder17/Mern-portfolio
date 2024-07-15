@@ -15,9 +15,9 @@ router.get('/get-portfolio-data', async (req, res) => {
         res.status(200).send({
             intro: intros[0],
             about: abouts[0],
-            experience: experiences[0],
+            experience: experiences,
             portfolio: portfolios[0],
-            service: services[0],
+            servie: services,
             contact: contacts[0],
         });
 

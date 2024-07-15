@@ -17,8 +17,9 @@ function Home() {
     const { portfolioData } = useSelector((state) => state.root);
     return (
         <div>
-            <Navbar />
+            {portfolioData && (
                 <div className="">
+                    <Navbar />
                     <Intro />
                     <About />
                     <Services />
@@ -28,8 +29,6 @@ function Home() {
                     <Sider />
                     <Footer />
                 </div>
-            {portfolioData && (
-                "helo"
             )}
 
         </div>
