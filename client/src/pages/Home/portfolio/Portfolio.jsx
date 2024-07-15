@@ -6,8 +6,6 @@ import './portfolio.css'
 const Portfolio = () => {
   const { portfolioData } = useSelector((state) => state.root);
   const { portfolio } = portfolioData;
-  const { title, gitlink, livedemo, image } = portfolio;
-  const img = `${process.env.PUBLIC_URL}/assets/${image}`;
 
   return (
     <section id='portfolio'>
@@ -18,7 +16,7 @@ const Portfolio = () => {
         {portfolio.map((portfolioItem) => (
           <article className="portfolio_item">
             <div className="portfolio_item-image">
-              <img src={portfolioItem.image} alt="" />
+              <img src={`${process.env.PUBLIC_URL}/assets/${portfolioItem.image}`} alt="" />
             </div>
             <h3>{portfolioItem.title}</h3>
             <div className="portfolio_item-cta">

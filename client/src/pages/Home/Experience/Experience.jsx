@@ -1,6 +1,5 @@
 import React from 'react'
 import './experience.css'
-// import { experiences } from './data'
 import { BsPatchCheckFill } from 'react-icons/bs'
 import { useSelector } from 'react-redux'
 
