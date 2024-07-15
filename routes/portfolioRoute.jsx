@@ -16,7 +16,7 @@ router.get('/get-portfolio-data', async (req, res) => {
             intro: intros[0],
             about: abouts[0],
             experience: experiences,
-            portfolio: portfolios[0],
+            portfolio: portfolios,
             servie: services,
             contact: contacts[0],
         });
