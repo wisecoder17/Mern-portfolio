@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-url = "mongodb+srv://richardogunwole17:Olaoluwa17db" + process.env.mongo_url;
+url = process.env.mongo_url;
 
 mongoose.connect(url);
 

@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -9,19 +9,75 @@
     z-index: 1000;
 }
 
-.letter{
-    display: flex;
-    flex-direction: row;
-    gap: 1.25rem;
-    font-size: 2.5rem;
-    font-weight: 600;
+section {
+    margin: 10px auto;
+    position: relative;
 }
-h1.text1{
-    color: var(--color-secondary);
+
+.spinner-container {
+    height: 200px; 
+    position: relative;
 }
-h1.text2{
-    color: var(--color-gray-100);
+
+.spinner {
+    height: 100px; 
+    width: 100px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px; /* Centering trick */
+    box-sizing: border-box;
+    border-radius: 50%;
 }
-h1.text3{
-    color: var(--color-primary);
+
+.spinner::before,
+.spinner::after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+/* spinner */
+
+.spinner-1,
+.spinner-1::before,
+.spinner-1::after {
+    border-radius: 50%;
+}
+
+.spinner-1 {
+    overflow: hidden;
+}
+
+.spinner-1::before,
+.spinner-1::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner-1::before {
+    width: 0;
+    height: 0;
+    background: var(--color-secondary);
+    animation: spinner-1 1.5s ease-in-out infinite alternate;
+}
+
+.spinner-1::after {
+    width: 0;
+    height: 0;
+    background: var(--color-gray-500);
+    z-index: 9;
+    animation: spinner-1 1.5s .2s ease-in-out infinite alternate;
+}
+
+@keyframes spinner-1 {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        width: 100%;
+        height: 100%;
+    }
 }
