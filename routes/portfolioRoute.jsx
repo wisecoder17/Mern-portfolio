@@ -11,6 +11,7 @@ router.get('/get-portfolio-data', async (req, res) => {
         const portfolios = await Portfolio.find();
         const services = await Services.find();
         const contacts = await Contact.find();
+        
 
         res.status(200).send({
             intro: intros[0],
