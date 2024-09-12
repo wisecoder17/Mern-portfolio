@@ -25,7 +25,7 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -50px 0 0 -50px; /* Centering trick */
+    margin: -50px 0 0 -50px; 
     box-sizing: border-box;
     border-radius: 50%;
 }
@@ -60,7 +60,7 @@ section {
     width: 0;
     height: 0;
     background: var(--color-secondary);
-    animation: spinner-1 1.5s ease-in-out infinite alternate;
+    animation: spinner-1 1.3s ease-in-out infinite alternate;
 }
 
 .spinner-1::after {
@@ -68,7 +68,7 @@ section {
     height: 0;
     background: var(--color-gray-500);
     z-index: 9;
-    animation: spinner-1 1.5s .2s ease-in-out infinite alternate;
+    animation: spinner-1 1.3s .2s ease-in-out infinite alternate;
 }
 
 @keyframes spinner-1 {
